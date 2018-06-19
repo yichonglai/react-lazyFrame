@@ -7,6 +7,7 @@ import { Router } from 'react-router-dom';
 import history from 'router/history';
 import getRouter from 'router/router';
 
+console.log(21321321)
 renderWithHotReload(getRouter);
 
 if (module.hot) {
