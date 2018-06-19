@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import style from './Page1.less';
 
@@ -9,9 +9,9 @@ export default class Page1 extends Component {
         return (
             <div className={style.box}>
                 this is page1~
-                <img src={image}/>
+                <img src={image} alt="ll" />
                 <span>fdshfdasjfadhjs</span>
             </div>
-        )
+        );
     }
 }

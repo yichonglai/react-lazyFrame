@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {increment, decrement, reset} from 'actions/counter';
+import React, { Component } from 'react';
+import { increment, decrement, reset } from 'actions/counter';
 
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 class Counter extends Component {
     render() {
@@ -15,28 +15,28 @@ class Counter extends Component {
                 <button onClick={() => this.props.reset()}>重置
                 </button>
             </div>
-        )
+        );
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
-        counter: state.counter
-    }
+        counter: state.counter,
+    };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
     return {
         increment: () => {
-            dispatch(increment())
+            dispatch(increment());
         },
         decrement: () => {
-            dispatch(decrement())
+            dispatch(decrement());
         },
         reset: () => {
-            dispatch(reset())
-        }
-    }
+            dispatch(reset());
+        },
+    };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

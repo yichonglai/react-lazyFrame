@@ -14,12 +14,12 @@ export default class App extends Component {
     render() {
         return (
             <Switch>
-                <Route exact path="/" component={lazyComponent(Home)}/>
-                <Route path="/page1" component={lazyComponent(Page1)}/>
-                <Route path="/counter" component={lazyComponent(Counter)}/>
-                <Route path="/userinfo" component={lazyComponent(UserInfo)}/>
-                <Route component={lazyComponent(NotFound)}/>
+                <Route exact path="/" component={lazyComponent(Home)} />
+                <Route path="/page1" component={lazyComponent(Page1)} />
+                <Route path="/counter" component={lazyComponent(Counter)} />
+                <Route path="/userinfo" component={lazyComponent(UserInfo)} />
+                <Route component={lazyComponent(NotFound)} />
             </Switch>
-        )
+        );
     }
 }

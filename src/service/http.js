@@ -22,7 +22,7 @@ const FN = {
         };
     },
     checkCode(res, opt) {
-        const code = res.data.code;
+        const { code } = res.data;
         if (code !== 200) {
             if (code === -404) {
                 alert(res.data.msg);

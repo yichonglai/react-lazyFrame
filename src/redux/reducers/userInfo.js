@@ -1,10 +1,10 @@
-import {GET_USER_INFO_REQUEST, GET_USER_INFO_SUCCESS, GET_USER_INFO_FAIL} from 'actions/userInfo';
+import { GET_USER_INFO_REQUEST, GET_USER_INFO_SUCCESS, GET_USER_INFO_FAIL } from 'actions/userInfo';
 
 
 const initState = {
     isLoading: false,
     userInfo: {},
-    errorMsg: ''
+    errorMsg: '',
 };
 
 export default function reducer(state = initState, action) {
@@ -14,21 +14,21 @@ export default function reducer(state = initState, action) {
                 ...state,
                 isLoading: true,
                 userInfo: {},
-                errorMsg: ''
+                errorMsg: '',
             };
         case GET_USER_INFO_SUCCESS:
             return {
                 ...state,
                 isLoading: false,
                 userInfo: action.result.data,
-                errorMsg: ''
+                errorMsg: '',
             };
         case GET_USER_INFO_FAIL:
             return {
                 ...state,
                 isLoading: false,
                 userInfo: {},
-                errorMsg: '请求错误'
+                errorMsg: '请求错误',
             };
         default:
             return state;

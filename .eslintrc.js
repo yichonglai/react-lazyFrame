@@ -1,0 +1,80 @@
+// https://eslint.org/docs/user-guide/configuring
+
+module.exports = {
+    root: true,
+    parser: 'babel-eslint',
+    extends: 'airbnb',
+    env: {
+        browser: true,
+        node: true,
+        es6: true
+    },
+    plugins: [
+        'react',
+        "jsx-a11y"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    rules: {
+        "arrow-parens": [2, "as-needed"],
+        "arrow-body-style": 0,
+        "comma-dangle": [2, "always-multiline"],
+        "object-shorthand": 0,
+        "indent": 0,
+        'linebreak-style': 0,
+        "no-tabs": 0,
+        "import/first": 0,
+        "import/newline-after-import": 0,
+        "import/no-dynamic-require": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/no-named-as-default": 0,
+        "import/no-unresolved": 0,
+        "import/prefer-default-export": 0,
+        "import/extensions": 0,
+        "import/no-webpack-loader-syntax": 0,
+        "import/no-mutable-exports": 0,
+        "jsx-a11y/aria-props": 2,
+        "jsx-a11y/heading-has-content": 0,
+        "jsx-a11y/label-has-for": 2,
+        "jsx-a11y/mouse-events-have-key-events": 2,
+        "jsx-a11y/role-has-required-aria-props": 2,
+        "jsx-a11y/role-supports-aria-props": 2,
+        "jsx-a11y/anchor-is-valid": 0,
+        "max-len": 0,
+        "newline-per-chained-call": 0,
+        "no-console": 0,
+        "no-alert": 0,
+        "prefer-template": 2,
+        "class-methods-use-this": 0,
+        "react/forbid-prop-types": 0,
+        "react/jsx-filename-extension": 0,
+        "react/jsx-no-target-blank": 0,
+        "react/require-extension": 0,
+        "react/self-closing-comp": 0,
+        "react/jsx-indent": 0,
+        "react/prop-types": 0,
+        "react/jsx-indent-props": 0,
+        // "react/jsx-indent-props": [2, "tab"],
+        "react/prefer-stateless-function": 0,
+        'no-trailing-spaces': 'off',
+        "no-case-declarations":'off',
+        "consistent-return":'off',
+        "no-mixed-spaces-and-tabs":'off',
+        "no-plusplus":'off',
+        "prefer-const":'off',
+        "no-underscore-dangle": 0,
+        "no-nested-ternary": 0,
+        "global-require": 0,
+        "no-param-reassign": 0,
+        "no-unused-vars": 0,
+        "no-shadow": 0,
+        "no-confusing-arrow": 0,
+        // allow debugger during development
+        'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    }
+};

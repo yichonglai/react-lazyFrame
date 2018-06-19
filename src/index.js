@@ -7,8 +7,18 @@ import { Router } from 'react-router-dom';
 import history from 'router/history';
 import getRouter from 'router/router';
 
-console.log(21321321)
-renderWithHotReload(getRouter);
+function renderWithHotReload(RootElement) {
+    ReactDom.render(
+        <AppContainer>
+            <Provider store={store}>
+                <Router history={history}>
+                    <RootElement />
+                </Router>
+            </Provider>
+        </AppContainer>,
+        document.getElementById('app')
+    );
+}
 
 if (module.hot) {
     module.hot.accept('router/router', () => {
@@ -17,15 +27,4 @@ if (module.hot) {
     });
 }
 
-function renderWithHotReload(RootElement) {
-    ReactDom.render(
-        <AppContainer>
-            <Provider store={store}>
-                <Router history={history}>
-                    <RootElement/>
-                </Router>
-            </Provider>
-        </AppContainer>,
-        document.getElementById('app')
-    )
-}
+renderWithHotReload(getRouter);

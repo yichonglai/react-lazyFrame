@@ -1,34 +1,34 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 
 class Bundle extends Component {
     state = {
-        mod: null
+        mod: null,
     };
 
     componentWillMount() {
-        this.load(this.props)
+        this.load(this.props);
     }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.load !== this.props.load) {
-            this.load(nextProps)
+            this.load(nextProps);
         }
     }
 
     load(props) {
         this.setState({
-            mod: null
+            mod: null,
         });
-        props.load((mod) => {
+        props.load(mod => {
             this.setState({
-                mod: mod.default ? mod.default : mod
-            })
-        })
+                mod: mod.default ? mod.default : mod,
+            });
+        });
     }
 
     render() {
-        return this.props.children(this.state.mod)
+        return this.props.children(this.state.mod);
     }
 }
 
-export default Bundle
+export default Bundle;
