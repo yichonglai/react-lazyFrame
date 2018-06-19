@@ -7,11 +7,6 @@ import { Router } from 'react-router-dom';
 import history from 'router/history';
 import getRouter from 'router/router';
 
-//模拟ajax数据 开发环境下、ie11以下不兼容
-/* if (MOCK) {
-    require('mock/mock');
-} */
-
 renderWithHotReload(getRouter);
 
 if (module.hot) {
