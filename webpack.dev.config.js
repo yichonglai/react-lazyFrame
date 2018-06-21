@@ -33,6 +33,11 @@ const devConfig = {
        /*  new webpack.DefinePlugin({//模拟数据变量
             MOCK: true
         }) */
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('development'),
+            },
+        }),
         new webpack.LoaderOptionsPlugin({
             options: {
                 eslint: {

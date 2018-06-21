@@ -22,14 +22,29 @@ const commonConfig = {
                 test: /\.js$/,
                 use: ['babel-loader?cacheDirectory=true'],
                 include: path.join(__dirname, 'src'),
-            }, {
-                test: /\.(png|jpe?g|gif|svg)$/,
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 use: [{
                     loader: 'url-loader',
                     options: {
                         limit: 8192,
                     },
                 }],
+            },
+            {
+                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 8192,
+                },
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 8192,
+                },
             },
         ],
     },
